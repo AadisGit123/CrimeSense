@@ -1,0 +1,197 @@
+.pageHeader {
+  padding-bottom: 1.5rem;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid;
+}
+
+.pageHeader h2 {
+  font-size: 1.6rem;
+  letter-spacing: 1px;
+  margin: 0 0 0.25rem 0;
+}
+
+.pageHeader p {
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+.statsSection {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.searchBox {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  padding: 0.75rem 1.25rem;
+  margin-bottom: 2rem;
+  transition: all 0.3s ease;
+}
+
+.searchIcon {
+  font-size: 1.2rem;
+  flex-shrink: 0;
+}
+
+.searchBox input {
+  flex: 1;
+  font-size: 0.95rem;
+  width: 100%;
+}
+
+.searchBox:focus-within {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.15);
+}
+
+.loadingContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 250px;
+}
+
+.emptyState {
+  text-align: center;
+  padding: 4rem 2rem;
+}
+
+/* Dossier Grid */
+.criminalsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
+  gap: 2rem;
+}
+
+.criminalCard {
+  border: 1px solid;
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.criminalCard:hover {
+  transform: translateY(-5px);
+  border-color: rgba(244, 63, 94, 0.4) !important;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25) !important;
+}
+
+.dossierBadge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  padding: 0.2rem 0.4rem;
+  border: 1.5px solid;
+  border-radius: 4px;
+  background-color: rgba(9, 10, 15, 0.8);
+  backdrop-filter: blur(4px);
+  z-index: 10;
+}
+
+.cardImage {
+  height: 220px;
+  width: 100%;
+  overflow: hidden;
+  border-bottom: 1px solid;
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.suspectPic {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  transition: transform 0.4s ease;
+}
+
+.criminalCard:hover .suspectPic {
+  transform: scale(1.04);
+}
+
+.placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.cardContent {
+  padding: 1.5rem;
+}
+
+.suspectName {
+  font-size: 1.25rem;
+  margin: 0 0 1rem 0;
+  letter-spacing: 0.5px;
+}
+
+.dossierGrid {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.detailRow {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 0.4rem;
+  border-bottom: 1px solid;
+  font-size: 0.85rem;
+}
+
+.detailLabel {
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.detailValue {
+  font-weight: 500;
+}
+
+.crimesContainer {
+  margin-top: 1rem;
+}
+
+.crimeLabel {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  margin-bottom: 0.4rem;
+  display: flex;
+  align-items: center;
+}
+
+.crimeDetails {
+  padding: 0.65rem 0.85rem;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  border: 1px dashed;
+  line-height: 1.4;
+}
+
+@media (max-width: 768px) {
+  .criminalsGrid {
+    grid-template-columns: 1fr;
+  }
+}

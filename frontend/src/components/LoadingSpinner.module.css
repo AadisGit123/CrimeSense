@@ -1,0 +1,69 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.spinner-small {
+  width: 32px;
+  height: 32px;
+}
+
+.spinner-medium {
+  width: 56px;
+  height: 56px;
+}
+
+.spinner-large {
+  width: 88px;
+  height: 88px;
+}
+
+.spinnerWrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.spinnerOuter {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: 3px solid;
+  border-radius: 50%;
+  animation: spinClockwise 1.2s cubic-bezier(0.5, 0.1, 0.4, 0.9) infinite;
+}
+
+.spinnerInner {
+  position: absolute;
+  width: 70%;
+  height: 70%;
+  border: 2px solid;
+  border-radius: 50%;
+  animation: spinCounterClockwise 1s cubic-bezier(0.5, 0.1, 0.4, 0.9) infinite;
+}
+
+.pulseNode {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  animation: nodePulse 1s ease-in-out infinite alternate;
+}
+
+@keyframes spinClockwise {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes spinCounterClockwise {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(-360deg); }
+}
+
+@keyframes nodePulse {
+  0% { transform: scale(0.7); opacity: 0.5; }
+  100% { transform: scale(1.2); opacity: 1; }
+}

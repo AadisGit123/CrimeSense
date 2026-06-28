@@ -1,0 +1,181 @@
+.pageHeader {
+  padding-bottom: 1.5rem;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid;
+}
+
+.pageHeader h2 {
+  font-size: 1.6rem;
+  letter-spacing: 1px;
+  margin: 0 0 0.25rem 0;
+}
+
+.pageHeader p {
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+.registerLayout {
+  max-width: 850px;
+  margin: 0 auto;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.formGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.formGroup label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+.uploadSection {
+  margin-top: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.uploadSection label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+.dropZone {
+  width: 100%;
+  border: 2px dashed;
+  border-radius: 10px;
+  padding: 2.25rem 1.5rem;
+  text-align: center;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.dropZone:hover {
+  border-color: var(--accent) !important;
+  box-shadow: 0 8px 24px rgba(139, 92, 246, 0.05);
+}
+
+/* Image Previews */
+.previewSection {
+  margin-top: 1.5rem;
+  border-top: 1px solid var(--border);
+  padding-top: 1.25rem;
+}
+
+.previewTitle {
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  margin-bottom: 0.75rem;
+}
+
+.previewGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  gap: 1rem;
+}
+
+.previewItem {
+  height: 100px;
+  border: 1px solid;
+  border-radius: 8px;
+  overflow: hidden;
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.previewItem img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.removeBtn {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  width: 20px;
+  height: 20px;
+  border: none;
+  border-radius: 50%;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 0.65rem;
+  opacity: 0.9;
+  transition: all 0.2s ease;
+  z-index: 10;
+}
+
+.removeBtn:hover {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+.sampleBadge {
+  position: absolute;
+  bottom: 4px;
+  left: 4px;
+  font-size: 0.6rem;
+  font-weight: 700;
+  padding: 0.1rem 0.3rem;
+  border-radius: 3px;
+  letter-spacing: 0.5px;
+}
+
+.error, .success {
+  padding: 0.85rem 1.25rem;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  border: 1px solid;
+  display: flex;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.submitBtn {
+  width: 100%;
+  margin-top: 1.5rem;
+  color: white;
+}
+
+.loadingWrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+@media (max-width: 768px) {
+  .formGrid {
+    grid-template-columns: 1fr;
+  }
+}

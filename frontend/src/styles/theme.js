@@ -1,0 +1,41 @@
+export const lightTheme = {
+  background: '#f8fafc',
+  surface: '#ffffff',
+  surfaceCard: 'rgba(255, 255, 255, 0.8)',
+  textPrimary: '#0f172a',
+  textSecondary: '#64748b',
+  accent: '#6366f1',
+  accentHover: '#4f46e5',
+  border: '#e2e8f0',
+  borderLight: '#f1f5f9',
+  success: '#10b981',
+  warning: '#f59e0b',
+  error: '#ef4444',
+  shadow: 'rgba(99, 102, 241, 0.08)',
+  glow: 'rgba(99, 102, 241, 0.2)',
+  glowRed: 'rgba(239, 68, 68, 0.2)',
+  fontTitle: "'Space Grotesk', sans-serif",
+  fontBody: "'Plus Jakarta Sans', sans-serif",
+  fontMono: "'Orbitron', sans-serif"
+};
+
+export const darkTheme = {
+  background: '#090a0f',
+  surface: '#11131e',
+  surfaceCard: 'rgba(17, 19, 30, 0.75)',
+  textPrimary: '#f8fafc',
+  textSecondary: '#94a3b8',
+  accent: '#8b5cf6',
+  accentHover: '#7c3aed',
+  border: '#1e293b',
+  borderLight: '#0f172a',
+  success: '#10b981',
+  warning: '#f59e0b',
+  error: '#f43f5e',
+  shadow: 'rgba(0, 0, 0, 0.5)',
+  glow: 'rgba(139, 92, 246, 0.3)',
+  glowRed: 'rgba(244, 63, 94, 0.4)',
+  fontTitle: "'Space Grotesk', sans-serif",
+  fontBody: "'Plus Jakarta Sans', sans-serif",
+  fontMono: "'Orbitron', sans-serif"
+};

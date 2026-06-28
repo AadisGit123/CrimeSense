@@ -1,0 +1,31 @@
+.panel {
+  border: 1px solid;
+  border-radius: 12px;
+  overflow: hidden;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.panel:hover {
+  border-color: rgba(139, 92, 246, 0.4) !important;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3) !important;
+}
+
+.header {
+  padding: 1.25rem 1.75rem;
+  border-bottom: 1px solid;
+  background-color: rgba(15, 23, 42, 0.05);
+}
+
+.header h3 {
+  margin: 0;
+  font-size: 1.15rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.body {
+  padding: 1.75rem;
+}

@@ -1,0 +1,239 @@
+.pageHeader {
+  padding-bottom: 1.5rem;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid;
+}
+
+.pageHeader h2 {
+  font-size: 1.6rem;
+  letter-spacing: 1px;
+  margin: 0 0 0.25rem 0;
+}
+
+.pageHeader p {
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+.scannerLayout {
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  gap: 2rem;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.uploadArea {
+  width: 100%;
+  min-height: 380px;
+  border: 2px dashed;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.uploadArea:hover {
+  border-color: var(--accent) !important;
+  box-shadow: 0 8px 30px rgba(139, 92, 246, 0.05);
+}
+
+.uploadPrompt {
+  text-align: center;
+}
+
+.uploadIcon {
+  animation: pulseIcon 3s infinite ease-in-out;
+}
+
+@keyframes pulseIcon {
+  0%, 100% { transform: scale(1); opacity: 0.8; }
+  50% { transform: scale(1.08); opacity: 1; }
+}
+
+.previewContainer {
+  position: relative;
+  width: 100%;
+  max-height: 420px;
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.mainImage {
+  max-width: 100%;
+  max-height: 400px;
+  display: block;
+  object-fit: contain;
+  border-radius: 6px;
+}
+
+.resetBadge {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  padding: 0.3rem 0.6rem;
+  border-radius: 4px;
+  border: 1px solid;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 700;
+  cursor: pointer;
+  letter-spacing: 0.5px;
+  z-index: 20;
+}
+
+.error {
+  width: 100%;
+  padding: 0.85rem 1.25rem;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  border: 1px solid;
+  display: flex;
+  align-items: center;
+}
+
+.statusDisplay {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+/* Dossier Column */
+.dossierEmpty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 380px;
+  text-align: center;
+  padding: 2rem;
+}
+
+.scanRadar {
+  width: 50px;
+  height: 50px;
+  border: 3px solid;
+  border-radius: 50%;
+  animation: spinRadar 1s linear infinite;
+}
+
+@keyframes spinRadar {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.resultsPanel {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.alertHeader {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  border-radius: 8px;
+  border: 1px solid;
+}
+
+.alertHeaderText h4 {
+  margin: 0;
+  font-size: 1rem;
+  letter-spacing: 0.5px;
+}
+
+.alertHeaderText span {
+  font-size: 0.75rem;
+}
+
+.resultsSubtitle {
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin: 0;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid;
+  text-transform: uppercase;
+}
+
+.detectionsList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.detectionCard {
+  border: 1px solid;
+  border-radius: 8px;
+  padding: 0.85rem 1rem;
+}
+
+.dossierRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.25rem 0;
+  font-size: 0.85rem;
+}
+
+.suspectLabel {
+  font-weight: 600;
+}
+
+.suspectName {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+}
+
+.suspectConf {
+  font-weight: 700;
+  font-size: 0.8rem;
+}
+
+.noDetections {
+  padding: 2rem;
+  text-align: center;
+}
+
+.resetBtn {
+  background: none;
+  border: 1.5px solid;
+  border-radius: 8px;
+  padding: 0.75rem 1.25rem;
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 600;
+  font-size: 0.85rem;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.resetBtn:hover {
+  background-color: rgba(139, 92, 246, 0.05);
+}
+
+@media (max-width: 960px) {
+  .scannerLayout {
+    grid-template-columns: 1fr;
+  }
+  
+  .uploadArea {
+    min-height: 280px;
+  }
+}
