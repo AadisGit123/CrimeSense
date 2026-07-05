@@ -1,5 +1,5 @@
 """
-IoT Hub for CrimeSense - Real-time Criminal Detection System
+IoT Hub for AegisAI - Real-time Criminal Detection System
 Features:
   1. Camera Watchdog - monitors /camera_input for new frames
   2. Real-time Watchlist Sync - keeps criminal database synchronized
@@ -179,7 +179,7 @@ class AlertPublisher:
         alert_payload = {
             "timestamp": datetime.now().isoformat(),
             "event_type": "criminal_detection",
-            "source": "CrimeSense-IoT",
+            "source": "AegisAI-IoT",
             "detections": detection_data,
             "confidence_threshold": 95
         }

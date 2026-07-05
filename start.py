@@ -1,5 +1,5 @@
 """
-CrimeSense Startup Script
+AegisAI Startup Script
 Runs both the web dashboard and IoT mock API server
 """
 
@@ -8,7 +8,7 @@ import sys
 import time
 
 print("=" * 60)
-print("  CrimeSense Security System")
+print("  AegisAI Security System")
 print("=" * 60)
 
 # Start mock API server in background
@@ -30,7 +30,7 @@ web_process = subprocess.Popen(
 )
 
 print("\n" + "=" * 60)
-print("  CrimeSense is running!")
+print("  AegisAI is running!")
 print("=" * 60)
 print("  Web Dashboard: http://localhost:5000")
 print("  IoT API:        http://localhost:8080")
@@ -49,7 +49,7 @@ try:
             break
         time.sleep(1)
 except KeyboardInterrupt:
-    print("\n\nStopping CrimeSense services...")
+    print("\n\nStopping AegisAI services...")
     api_process.terminate()
     web_process.terminate()
     print("All services stopped.")

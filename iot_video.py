@@ -93,7 +93,7 @@ def create_iot_video_loop(recognize_func, detect_faces_func):
                     alert_payload = {
                         "timestamp": datetime.now().isoformat(),
                         "event_type": "criminal_detection",
-                        "source": "CrimeSense-VideoSurveillance",
+                        "source": "AegisAI-VideoSurveillance",
                         "video_file": filenam + file_extension,
                         "detections": detection_buffer
                     }
@@ -128,7 +128,7 @@ def create_iot_video_loop(recognize_func, detect_faces_func):
                 alert_payload = {
                     "timestamp": datetime.now().isoformat(),
                     "event_type": "video_session_ended",
-                    "source": "CrimeSense-VideoSurveillance",
+                    "source": "AegisAI-VideoSurveillance",
                     "video_file": filenam + file_extension,
                     "detections": detection_buffer
                 }
@@ -140,7 +140,7 @@ def create_iot_video_loop(recognize_func, detect_faces_func):
     return iot_video_loop
 
 
-def post_detection_alert(name, confidence, source="CrimeSense"):
+def post_detection_alert(name, confidence, source="AegisAI"):
     """
     Simple function to post a single detection alert
     Can be called from anywhere in the application

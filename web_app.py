@@ -1,5 +1,5 @@
 """
-CrimeSense Web Application
+AegisAI Web Application
 Flask-based web dashboard for criminal detection system
 Features:
   - Web dashboard with real-time alert feed
@@ -59,14 +59,14 @@ def initialize_model():
     global model, names
     try:
         model, names = train_model()
-        print(f"[CrimeSense] Model loaded: {len(names)} identities")
+        print(f"[AegisAI] Model loaded: {len(names)} identities")
     except Exception as e:
-        print(f"[CrimeSense] Warning: Could not load model: {e}")
+        print(f"[AegisAI] Warning: Could not load model: {e}")
         model = None
         names = {}
 
 
-def publish_alert(detections, source="CrimeSense-Web"):
+def publish_alert(detections, source="AegisAI-Web"):
     """Publish detection alert to mock API server"""
     alert_payload = {
         "timestamp": datetime.now().isoformat(),
@@ -84,12 +84,12 @@ def publish_alert(detections, source="CrimeSense-Web"):
             timeout=5
         )
         if response.status_code in (200, 201, 202):
-            print(f"[CrimeSense] Alert published: {len(detections)} detections")
+            print(f"[AegisAI] Alert published: {len(detections)} detections")
             return True
     except requests.exceptions.ConnectionError:
-        print("[CrimeSense] Could not connect to alert API (mock server not running)")
+        print("[AegisAI] Could not connect to alert API (mock server not running)")
     except Exception as e:
-        print(f"[CrimeSense] Alert publish error: {e}")
+        print(f"[AegisAI] Alert publish error: {e}")
 
     return False
 
@@ -107,7 +107,7 @@ def is_watched(name):
                 if row.get('Name', '').strip().lower() == name.strip().lower():
                     return True
     except Exception as e:
-        print(f"[CrimeSense] Watchlist check error: {e}")
+        print(f"[AegisAI] Watchlist check error: {e}")
 
     return False
 
@@ -328,14 +328,14 @@ def process_image():
         # Publish alert if criminals detected
         watched_detections = [d for d in detections if is_watched(d['name'])]
         if watched_detections:
-            publish_alert(watched_detections, source="CrimeSense-ImageSurveillance")
+            publish_alert(watched_detections, source="AegisAI-ImageSurveillance")
             # Store in alerts
             alerts_received.append({
                 "received_at": datetime.now().isoformat(),
                 "data": {
                     "timestamp": datetime.now().isoformat(),
                     "event_type": "criminal_detection",
-                    "source": "CrimeSense-ImageSurveillance",
+                    "source": "AegisAI-ImageSurveillance",
                     "detections": watched_detections,
                     "image_id": image_id
                 }
@@ -407,13 +407,13 @@ def process_video():
 
             # Publish consolidated alert
             if all_detections:
-                publish_alert(all_detections, source="CrimeSense-VideoSurveillance")
+                publish_alert(all_detections, source="AegisAI-VideoSurveillance")
                 alerts_received.append({
                     "received_at": datetime.now().isoformat(),
                     "data": {
                         "timestamp": datetime.now().isoformat(),
                         "event_type": "criminal_detection",
-                        "source": "CrimeSense-VideoSurveillance",
+                        "source": "AegisAI-VideoSurveillance",
                         "detections": all_detections,
                         "video_id": video_id,
                         "frames_processed": frame_count
@@ -465,13 +465,13 @@ def camera_detect():
         watched_detections = [d for d in detections if is_watched(d['name'])]
 
         if watched_detections:
-            publish_alert(watched_detections, source="CrimeSense-Camera")
+            publish_alert(watched_detections, source="AegisAI-Camera")
             alerts_received.append({
                 "received_at": datetime.now().isoformat(),
                 "data": {
                     "timestamp": datetime.now().isoformat(),
                     "event_type": "criminal_detection",
-                    "source": "CrimeSense-Camera",
+                    "source": "AegisAI-Camera",
                     "detections": watched_detections
                 }
             })
@@ -530,7 +530,7 @@ def push_alert():
 
 if __name__ == '__main__':
     print("=" * 60)
-    print("  CrimeSense Security Command Center")
+    print("  AegisAI Security Command Center")
     print("=" * 60)
     print(f"  Web Dashboard: http://localhost:5000")
     print(f"  Alert API:     http://localhost:5000/api/alerts/push")

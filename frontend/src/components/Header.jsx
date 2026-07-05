@@ -33,7 +33,7 @@ const Header = () => {
         <div className={styles.logo}>
           <Link to="/" className={styles.logoText} style={{ color: theme.accent }}>
             <FiShield className={styles.logoIcon} style={{ color: theme.accent }} />
-            <span>CRIMESENSE</span>
+            <span>AEGISAI</span>
           </Link>
         </div>
 

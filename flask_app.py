@@ -28,7 +28,7 @@ SENDER_EMAIL = "YOUR_SENDER_EMAIL"
 try:
     cred = credentials.Certificate('serviceAccountKey.json')
     firebase_admin.initialize_app(cred, {
-        'databaseURL': 'https://crimesense-18d52-default-rtdb.firebaseio.com/'
+        'databaseURL': 'https://aegisai-default-rtdb.firebaseio.com/'
     })
     print("[*] FIREBASE_INITIALIZED")
 except Exception as e:
@@ -45,7 +45,7 @@ LOGIN_HTML = """
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CRIMESENSE | AUTH</title>
+    <title>AEGISAI | AUTH</title>
     <style>
         body { margin: 0; height: 100vh; background: #050505; display: flex; justify-content: center; align-items: center; font-family: 'JetBrains Mono', monospace; color: #c9d1d9; padding: 20px; box-sizing: border-box; }
         .glass-box { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(15px); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 16px; padding: 30px; width: 100%; max-width: 350px; text-align: center; }
@@ -76,7 +76,7 @@ DASHBOARD_HTML = """
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CRIMESENSE | COMMAND</title>
+    <title>AEGISAI | COMMAND</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
@@ -502,7 +502,7 @@ DASHBOARD_HTML = """
         <aside class="sidebar">
             <div>
                 <div class="brand">
-                    <div class="brand-title">CRIMESENSE</div>
+                    <div class="brand-title">AEGISAI</div>
                     <div class="brand-sub">INTELLIGENCE CENTER</div>
                 </div>
                 <nav class="nav">
@@ -748,7 +748,7 @@ def send_otp_email(otp_code):
         message = MIMEText(f"TACTICAL COMMAND CENTER ACCESS\n\nCODE: {otp_code}\nVALIDITY: 10 MINUTES")
         message['to'] = ADMIN_EMAIL
         message['from'] = SENDER_EMAIL
-        message['subject'] = "CRIMESENSE: Security Clearance Code"
+        message['subject'] = "AEGISAI: Security Clearance Code"
         raw_message = base64.urlsafe_b64encode(message.as_bytes()).decode()
 
         # Step C: Send via Gmail API

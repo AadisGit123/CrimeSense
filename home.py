@@ -334,7 +334,7 @@ def getPage3():
 # MAIN INTERFACE
 # =============================================================================
 root = tk.Tk()
-root.title(f"CRIMESENSE_EDGE | {NODE_ID}")
+root.title(f"AEGISAI_EDGE | {NODE_ID}")
 root.geometry("1100x850")
 root.configure(bg=BG_PRIMARY)
 
@@ -342,7 +342,7 @@ pages = [tk.Frame(root, bg=BG_PRIMARY) for _ in range(4)]
 for p in pages:
     p.place(x=0, y=0, relwidth=1, relheight=1)
 
-tk.Label(pages[0], text="CRIMESENSE SECURITY TERMINAL", fg=TEXT_ACTION, bg=BG_PRIMARY, font=("Segoe UI", 22, "bold"), pady=60).pack()
+tk.Label(pages[0], text="AEGISAI SECURITY TERMINAL", fg=TEXT_ACTION, bg=BG_PRIMARY, font=("Segoe UI", 22, "bold"), pady=60).pack()
 
 btn_frame = tk.Frame(pages[0], bg=BG_PRIMARY)
 btn_frame.pack(pady=10)

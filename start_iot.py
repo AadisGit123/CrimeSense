@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-CrimeSense IoT System - Quick Start Script
+AegisAI IoT System - Quick Start Script
 Usage:
     1. Start mock API server: python flask_app.py
     2. Start IoT hub: python start_iot.py
@@ -90,7 +90,7 @@ def test_iot_alerts():
 
 def interactive_mode():
     """Run IoT Hub in interactive mode"""
-    print("\n=== CrimeSense IoT Hub - Interactive Mode ===")
+    print("\n=== AegisAI IoT Hub - Interactive Mode ===")
     print("Starting IoT services...")
 
     # Initialize and start IoT Hub
@@ -123,7 +123,7 @@ def interactive_mode():
 
 def main():
     import argparse
-    parser = argparse.ArgumentParser(description="CrimeSense IoT Hub")
+    parser = argparse.ArgumentParser(description="AegisAI IoT Hub")
     parser.add_argument("--test", action="store_true", help="Run all tests")
     parser.add_argument("--interactive", action="store_true", help="Run in interactive mode")
     parser.add_argument("--server", action="store_true", help="Start mock API server")

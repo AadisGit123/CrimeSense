@@ -5,13 +5,13 @@ const ThemeContext = createContext();
 
 export const ThemeProvider = ({ children }) => {
   const [isDark, setIsDark] = useState(() => {
-    const saved = localStorage.getItem('crimesense-theme');
+    const saved = localStorage.getItem('aegisai-theme');
     if (saved) return saved === 'dark';
     return window.matchMedia('(prefers-color-scheme: dark)').matches;
   });
 
   useEffect(() => {
-    localStorage.setItem('crimesense-theme', isDark ? 'dark' : 'light');
+    localStorage.setItem('aegisai-theme', isDark ? 'dark' : 'light');
     document.documentElement.setAttribute('data-theme', isDark ? 'dark' : 'light');
   }, [isDark]);
 

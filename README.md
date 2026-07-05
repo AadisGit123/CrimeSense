@@ -1,10 +1,10 @@
-# CrimeSense - AI-Powered Criminal Detection System
+# AegisAI - AI-Powered Criminal Detection System
 
 A comprehensive security system combining facial recognition, IoT integration, and real-time monitoring for criminal detection.
 
 ## Project Overview
 
-CrimeSense is a multi-platform security solution that:
+AegisAI is a multi-platform security solution that:
 - Detects criminals using face recognition (LBPH algorithm)
 - Integrates with IoT devices for real-time surveillance
 - Provides a web dashboard for monitoring alerts
@@ -15,7 +15,7 @@ CrimeSense is a multi-platform security solution that:
 
 ```
 ┌──────────────────────────────────────────────────────────────┐
-│                    CrimeSense System                         │
+│                    AegisAI System                         │
 ├─────────────┬─────────────┬─────────────┬────────────────────┤
 │  Desktop    │   Web App   │  IoT Hub    │  Flask Backend     │
 │  (Tkinter)  │   (Flask)   │  (Cameras)  │  (Alerts/Firebase) │
@@ -66,7 +66,7 @@ CrimeSense is a multi-platform security solution that:
 ```bash
 # Clone the repository
 git clone <repository-url>
-cd crimesense
+cd aegisai
 
 # Create virtual environment
 python -m venv venv
@@ -208,7 +208,7 @@ Create a `.env` file for sensitive configuration:
 
 ```env
 # Firebase
-FIREBASE_DATABASE_URL=https://crimesense-18d52-default-rtdb.firebaseio.com/
+FIREBASE_DATABASE_URL=https://aegisai-default-rtdb.firebaseio.com/
 
 # Gmail API
 GMAIL_CLIENT_ID=your-client-id
@@ -277,12 +277,11 @@ Full list in `requirements.txt`
 This project is for educational/demonstration purposes. Ensure compliance with local laws and regulations regarding facial recognition and surveillance systems.
 
 ## Author
-
 Aaditya Santosh Chaurasiya - 2026
 
-### Method of Initiation
+## Method of Initiation
 
-cd frontend
+cd frontend 
 npm install
 
 npm run dev
