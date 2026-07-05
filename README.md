@@ -278,4 +278,13 @@ This project is for educational/demonstration purposes. Ensure compliance with l
 
 ## Author
 
-Shashank Kontikal - 2026
+Aaditya Santosh Chaurasiya - 2026
+
+##Method of Initiation
+
+cd frontend
+npm install
+
+npm run dev
+
+Then Open the localhost link in the native web Browser.
