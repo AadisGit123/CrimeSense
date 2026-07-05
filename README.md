@@ -280,7 +280,7 @@ This project is for educational/demonstration purposes. Ensure compliance with l
 
 Aaditya Santosh Chaurasiya - 2026
 
-##Method of Initiation
+## Method of Initiation
 
 cd frontend
 npm install
