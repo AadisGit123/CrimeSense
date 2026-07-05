@@ -282,6 +282,7 @@ Aaditya Santosh Chaurasiya - 2026
 ## Method of Initiation
 
 cd frontend 
+
 npm install
 
 npm run dev
